@@ -110,84 +110,21 @@ robonauts,nepal,the robonauts,blogs on robotics nepal,nepali robots
         </div>
     </div>
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 padd">
+      {% for blog in blogs %}
       <div class="col p-3 p-md-4 mb-1 mb-sm-5">
         <div class="card">
-            <img src="{% static 'images/blogthumb.jpg' %}" alt="image" class="img-fluid rounded-top">
+            <img src="{{blog.thumbnail_image.url}}" alt="image" class="img-fluid rounded-top">
           <div class="card-body">
-              <p class="text-secondary">October 20, 2020</p>
-            <a href="#" class="video_title mt-2 mybloglink">Team Low-Cost Teaching Aids Bags $1000 USD in HACK-ED 2020</a>
+              <p class="text-secondary">{{blog.date}}</p>
+            <a href="#" class="video_title mt-2 mybloglink">{{blog.title}}</a>
             <p class="blogdetail mt-2">
-                HACK-ED 2020 (Hack for Education) is a three-day online hackathon with a mission to change the way we teach and
+                {{blog.content | safe |truncatewords:20}}
             </p>
-            <a href="#" class="btn btn-success no-border">Read more »</a>
+            <a href="{% url 'blog_single' blog.slug %}" class="btn btn-success no-border">Read more »</a>
           </div>
         </div>
       </div>
-      <div class="col p-3 p-md-4 mb-1 mb-sm-5">
-        <div class="card ">
-            <img src="{% static 'images/blogthumb.jpg' %}" alt="image" class="img-fluid rounded-top">
-          <div class="card-body">
-              <p class="text-secondary">October 20, 2020</p>
-            <a href="#" class="video_title mt-2 mybloglink">Team Low-Cost Teaching Aids Bags $1000 USD in HACK-ED 2020</a>
-            <p class="blogdetail mt-2">
-                HACK-ED 2020 (Hack for Education) is a three-day online hackathon with a mission to change the way we teach and
-            </p>
-            <a href="#" class="btn btn-success no-border">Read more »</a>
-          </div>
-        </div>
-      </div>
-      <div class="col p-3 p-md-4 mb-1 mb-sm-5">
-        <div class="card">
-            <img src="{% static 'images/blogthumb.jpg' %}" alt="image" class="img-fluid rounded-top">
-          <div class="card-body">
-              <p class="text-secondary">October 20, 2020</p>
-            <a href="#" class="video_title mt-2 mybloglink">Team Low-Cost Teaching Aids Bags $1000 USD in HACK-ED 2020</a>
-            <p class="blogdetail mt-2">
-                HACK-ED 2020 (Hack for Education) is a three-day online hackathon with a mission to change the way we teach and
-            </p>
-            <a href="#" class="btn btn-success no-border">Read more »</a>
-          </div>
-        </div>
-      </div>
-      <div class="col p-3 p-md-4 mb-1 mb-sm-5">
-        <div class="card">
-            <img src="{% static 'images/blogthumb.jpg' %}" alt="image" class="img-fluid rounded-top">
-          <div class="card-body">
-              <p class="text-secondary">October 20, 2020</p>
-            <a href="#" class="video_title mt-2 mybloglink">Team Low-Cost Teaching Aids Bags $1000 USD in HACK-ED 2020</a>
-            <p class="blogdetail mt-2">
-                HACK-ED 2020 (Hack for Education) is a three-day online hackathon with a mission to change the way we teach and
-            </p>
-            <a href="#" class="btn btn-success no-border">Read more »</a>
-          </div>
-        </div>
-      </div>
-      <div class="col p-3 p-md-4 mb-1 mb-sm-5">
-        <div class="card">
-            <img src="{% static 'images/blogthumb.jpg' %}" alt="image" class="img-fluid rounded-top">
-          <div class="card-body">
-              <p class="text-secondary">October 20, 2020</p>
-            <a href="#" class="video_title mt-2 mybloglink">Team Low-Cost Teaching Aids Bags $1000 USD in HACK-ED 2020</a>
-            <p class="blogdetail mt-2">
-                HACK-ED 2020 (Hack for Education) is a three-day online hackathon with a mission to change the way we teach and
-            </p>
-            <a href="#" class="btn btn-success no-border">Read more »</a>
-          </div>
-        </div>
-      </div>
-      <div class="col p-3 p-md-4 mb-1 mb-sm-5">
-        <div class="card">
-            <img src="{% static 'images/blogthumb.jpg' %}" alt="image" class="img-fluid rounded-top">
-          <div class="card-body">
-              <p class="text-secondary">October 20, 2020</p>
-            <a href="#" class="video_title mt-2 mybloglink">Team Low-Cost Teaching Aids Bags $1000 USD in HACK-ED 2020</a>
-            <p class="blogdetail mt-2">
-                HACK-ED 2020 (Hack for Education) is a three-day online hackathon with a mission to change the way we teach and
-            </p>
-            <a href="#" class="btn btn-success no-border">Read more »</a>
-          </div>
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
   <!--Section blog design end-->

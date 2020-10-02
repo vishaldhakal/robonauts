@@ -12,3 +12,6 @@ class blog(models.Model):
     meta_keyword = models.CharField(max_length=200)
     thumbnail_image = models.FileField()
     content = RichTextField(blank=True,null=True)
+
+    def __str__(self):
+        return self.title
