@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+The Robonauts - Contact us
+{% endblock %}
+{% block metatitle %}
+The Robonauts - Contact us
+{% endblock %}
+{% block metadescription %}
+The Robonauts can provide you with various hardware and software related solution and trainings related to robotics.
+to develop the nation.
+{% endblock %}
+{% block metakeywords %}
+the robonauts,contact,location,where is robonauts
+{% endblock %}
+{% block body %}
+<!--Contact section start-->
+<div class="container">
+    <div class="contact_part">
+        <div class="row">
+            <div class="col text-center px-5"><img src="{%static 'images/contactt.png' %}" alt="Contact image vector"
+                    class="img-fluid">
+            </div>
+            <h6 class="text-center mytitle">Let's get in touch !</h6>
+            <h6 class="text-center">The Robonauts - </span><span><a
+                        href="mailto:teamrobonauts.np@gmail.com">teamrobonauts.np@gmail.com</a></h6>
+        </div>
+        <div class="row row-cols-1 row-cols-md-3 mt-5">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <form>
+                    <div class="row">
+                        <div class="mb-3">
+                            <input type="text" placeholder="Full Name" name="name" class="fields">
+                        </div>
+                    </div>
+                    <div class="row row-cols-1 row-cols-sm-2">
+                        <div class="col">
+                            <div class="mb-3">
+                                <input type="email" aria-describedby="emailHelp" placeholder="Your email" name="email"
+                                    class="fields">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="mb-3">
+                                <input type="text" name="phone" placeholder="Phone" name="phone" class="fields">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="mb-3">
+                            <input type="text" name="message" id="message" placeholder="Enter your message/query"
+                                class="fields mess">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col text-center"><button type="submit" class="btn btn-primary sendbtn">Send
+                                Now</button></div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+</div>
+<!--Contact section End-->
+{% endblock %}
