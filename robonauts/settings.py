@@ -25,7 +25,7 @@ SECRET_KEY = 'j6#nnk8f^ad*ln*=_$s5g2@jh8_01##hvxlnac9h*65_$3-+yf'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['robonauts.herokuapp.com','127.0.0.1']
 
 
 # Application definition
