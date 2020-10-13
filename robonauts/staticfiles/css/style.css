@@ -102,7 +102,7 @@ nav ul li a:hover {
   width: 100%;
   display: none;
   background: rgb(255, 255, 255);
-  box-shadow: 1px 1px 4px 1px rgb(175, 175, 175);
+  border-top: 0.1px solid red !important;
 }
 .hid {
   display: none;
