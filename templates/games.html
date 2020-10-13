@@ -101,108 +101,25 @@ the robonauts,robotics games nepal,robowars,robo soccer
       <div class="col-12 col-sm-12 col-md-3"></div>
     </div>
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 padd">
+      {% for video in videos %}
       <div class="col p-3 p-md-4 mb-1 mb-sm-5">
         <div class="card shadow">
           <div class="embed-responsive embed-responsive-16by9">
             <iframe class="embed-responsive-item"  width="1920"
               height="720"
-              src="https://www.youtube.com/embed/GafhOkBqOIM?rel=0?&controls=1&&showinfo=0&loop=0&modestbranding=1&showinfo=0&color=white"
+              src="{{video.video_link}}"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen></iframe>
           </div>
           <div class="card-body">
-            <h2 class="video_title">The Robonauts <span class="text text-danger">VS </span>Team Xenon</h2>
-            <h6 class="video_sub_title"><span class="text text-success">YANTRA 7.0 </span>International Manual Akhada
+            <h2 class="video_title">{{video.video_title}}</h2>
+            <h6 class="video_sub_title"><span class="text text-success">{{video.video_subtitle}}
             </h6><br>
           </div>
         </div>
       </div>
-      <div class="col p-3 p-md-4 mb-1 mb-sm-5">
-        <div class="card shadow">
-          <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item"  width="1920"
-              height="720"
-              src="https://www.youtube.com/embed/hkuGpL8uRDI?rel=0?&controls=1&&showinfo=0&loop=0&modestbranding=1&showinfo=0&color=white"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-          </div>
-          <div class="card-body">
-            <h2 class="video_title">Intro of Weapon X</h2>
-            <h6 class="video_sub_title"><span class="text text-success">Thapathali </span>Manual Akhada
-            </h6><br>
-          </div>
-        </div>
-      </div>
-      <div class="col p-3 p-md-4 mb-1 mb-sm-5">
-        <div class="card shadow">
-          <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item"  width="1920"
-              height="720"
-              src="https://www.youtube.com/embed/GafhOkBqOIM?rel=0?&controls=1&&showinfo=0&loop=0&modestbranding=1&showinfo=0&color=white"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-          </div>
-          <div class="card-body">
-            <h2 class="video_title">The Robonauts <span class="text text-danger">VS </span>Team Xenon</h2>
-            <h6 class="video_sub_title"><span class="text text-success">YANTRA 7.0 </span>International Manual Akhada
-            </h6><br>
-          </div>
-        </div>
-      </div>
-      <div class="col p-3 p-md-4 mb-1 mb-sm-5">
-        <div class="card shadow">
-          <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item"  width="1920"
-              height="720"
-              src="https://www.youtube.com/embed/GafhOkBqOIM?rel=0?&controls=1&&showinfo=0&loop=0&modestbranding=1&showinfo=0&color=white"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-          </div>
-          <div class="card-body">
-            <h2 class="video_title">The Robonauts <span class="text text-danger">VS </span>Team Xenon</h2>
-            <h6 class="video_sub_title"><span class="text text-success">YANTRA 7.0 </span>International Manual Akhada
-            </h6><br>
-          </div>
-        </div>
-      </div>
-      <div class="col p-3 p-md-4 mb-1 mb-sm-5">
-        <div class="card shadow">
-          <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item"  width="1920"
-              height="720"
-              src="https://www.youtube.com/embed/GafhOkBqOIM?rel=0?&controls=1&&showinfo=0&loop=0&modestbranding=1&showinfo=0&color=white"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-          </div>
-          <div class="card-body">
-            <h2 class="video_title">The Robonauts <span class="text text-danger">VS </span>Team Xenon</h2>
-            <h6 class="video_sub_title"><span class="text text-success">YANTRA 7.0 </span>International Manual Akhada
-            </h6><br>
-          </div>
-        </div>
-      </div>
-      <div class="col p-3 p-md-4 mb-1 mb-sm-5">
-        <div class="card shadow">
-          <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item"  width="1920"
-              height="720"
-              src="https://www.youtube.com/embed/GafhOkBqOIM?rel=0?&controls=1&&showinfo=0&loop=0&modestbranding=1&showinfo=0&color=white"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-          </div>
-          <div class="card-body">
-            <h2 class="video_title">The Robonauts <span class="text text-danger">VS </span>Team Xenon</h2>
-            <h6 class="video_sub_title"><span class="text text-success">YANTRA 7.0 </span>International Manual Akhada
-            </h6><br>
-          </div>
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
   <!--Section video design end-->

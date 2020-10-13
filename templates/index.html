@@ -17,6 +17,7 @@ robonauts,nepal,the robonauts,robotics training nepal
 <link rel="stylesheet" href="{% static 'css/glider.min.css' %}">
 {% endblock %}
 {% block body %}
+<circle class="light-green align-left mycircle"></circle>
 <div class="container my-5 my-sm-5 py-5">
     <div class="row pt-0 mt-0">
         <div class="col-md-6 abcd hid">
@@ -576,9 +577,9 @@ robonauts,nepal,the robonauts,robotics training nepal
         </div>
         <div class="row row-cols-1 row-cols-sm-2 mt-md-2">
             <div class="col p-5 p-md-5">
-                <img src="{% static 'images/first_global.jpg' %}"
-                    alt="Team the robonauts participating in first global challange competition representing nepal"
-                    class="img-fluid">
+                <video autoplay muted loop poster="{% static 'images/backrep.jpg' %}" class="img-fluid rounded videostyle">
+                    <source src="{% static 'images/myintro.mp4' %}" type="video/mp4">
+                </video>
             </div>
             <div class="col px-5">
                 <div class="mt-0 pt-3 pt-sm-0 px-3 mt-lg-0 pt-lg-5">

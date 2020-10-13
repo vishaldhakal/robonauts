@@ -1,16 +1,16 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}
-The Robonauts - Blogs and Articles
+The Robonauts - Blogs | {{blog.meta_title}}
 {% endblock %}
 {% block metatitle %}
-The Robonauts - Blogs and Articles
+{{blog.meta_title}}
 {% endblock %}
 {% block metadescription %}
-We try to give a detail overview over various Robotics and Automation Projects and components to help you understand these topics better.
+{{blog.meta_description}}
 {% endblock %}
 {% block metakeywords %}
-robonauts,nepal,the robonauts,blogs on robotics nepal,nepali robots
+{{blog.meta_keyword}}
 {% endblock %}
 {% block css %}
 <style>
@@ -72,21 +72,16 @@ robonauts,nepal,the robonauts,blogs on robotics nepal,nepali robots
 </div>
 <!--Section blog design end-->
 <div class="container padtop mt-5 bg-white">
-    <h2 class="text-center p-2">Related Blogs</h2>
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 padd">
-      {% for blog in blogs %}
+    <h2 class="text-center p-2 text-dark"><strong>Related Blogs</strong></h2>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+      {% for blogg in blogs %}
       <div class="col p-3 p-md-4 mb-1 mb-sm-5">
-        <div class="card shadow">
-            <img src="{% static 'images/blogthumb.jpg' %}" alt="image" class="img-fluid rounded-top">
-          <div class="card-body">
-              <p class="text-secondary">{{blog.date}}</p>
-            <a href="#" class="video_title mt-2 mybloglink">{{blog.title}}</a>
-            <p class="blogdetail mt-2">
-                {{blog.content | safe |truncatewords:20}}
-            </p>
-            <a href="{% url 'blog_single' blog.slug %}" class="btn btn-success no-border">Read more »</a>
-          </div>
-        </div>
+        <a href="{% url 'blog_single' blogg.slug %}" class="card shadow" id="mycard">
+            <img src="{{blogg.thumbnail_image.url}}" alt="image" class="img-fluid rounded-top">
+            <h3 class="over-text">
+                {{blogg.title}}
+            </h3>
+        </a>
       </div>
       {% endfor %}
     </div>

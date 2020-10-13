@@ -1,14 +1,22 @@
 from django.shortcuts import render,redirect
 from django.core.mail import send_mail
+from .models import video
 
 def index(request):
     return render(request,'index.html')
 
 def games(request):
-    return render(request,'games.html')
+    videos = video.objects.all()
+    context = {
+        'videos':videos
+    }
+    return render(request,'games.html',context)
 
 def contact(request):
     return render(request,'contact.html')
+
+def products(request):
+    return render(request,'products_list.html')
 
 def send_mails(request):
     if request.method == "POST":
