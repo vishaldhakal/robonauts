@@ -1,0 +1,118 @@
+.vertical-menu {
+  border: 1px solid #ebebeb;
+  /* Set a width if you like */
+}
+
+.vertical-menu a {
+  color: black; /* Black text color */
+  display: block; /* Make the links appear below each other */
+  padding: 12px; /* Add some padding */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.vertical-menu a:hover {
+  background-color: rgb(255, 255, 255); /* Dark grey background on mouse-over */
+}
+
+.vertical-menu a.active {
+  background-color: #002259; /* Add a green color to the "active/current" link */
+  color: white !important;
+}
+.c {
+  /* sister robot banner */
+  position: relative;
+}
+
+.shop-now {
+  /* shop now button */
+  position: absolute;
+  bottom: 30px;
+  right: 50px;
+  background-color: #002259 !important;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+hr.line {
+  /* featured product horizontal line */
+  border: 3px solid #002259;
+  margin: auto;
+  width: 10%;
+}
+/* hover navbar effect start */
+hr {
+  width: 80%;
+  border: 0;
+  height: 1px;
+  margin-top: 0px;
+  background-color: #000;
+}
+.mydis {
+  justify-content: space-around;
+}
+#name {
+  display: inline-block;
+}
+.mylabel {
+  background-color: red;
+  display: inline-block;
+}
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  padding: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9dbfaf;
+  border: 1px solid #002259;
+  border-radius: 0;
+  font-weight: bold;
+}
+
+.searchTerm:focus {
+  color: #131313;
+}
+.dropp {
+  border: none;
+  background: #002259;
+  text-align: center;
+  color: #fff;
+  border-radius: 0;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 20px 40px;
+}
+.dropp:hover{
+  color: white;
+  background-color:  rgba(0, 34, 89, 0.87)
+}
+.searchButton {
+  border: none;
+  background: #002259;
+  text-align: center;
+  color: #fff;
+  border-radius: 0;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 0px 40px;
+}
+@media (max-width: 500px) {
+  .dropp {
+    display: none;
+  }
+  .searchButton {
+    padding: 0px 10px;
+  }
+}
+body {
+  background-color: #f1f3fa;
+}
+
+.fix {
+  background-color: white;
+}
