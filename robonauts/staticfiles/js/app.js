@@ -1,34 +1,38 @@
-const menuIcon = document.querySelector('.menu');
-const images = document.querySelector('#myimages')
-const anim = document.querySelectorAll('.anim');
+const menuIcon = document.querySelector(".menu");
+const images = document.querySelector("#myimages");
+const anim = document.querySelectorAll(".anim");
 
-observer = new IntersectionObserver((entries)=>{
-    entries.forEach(entry => {
-        if(entry.intersectionRatio > 0){
-            entry.target.style.animation = `fade1 1s linear`;
-        }else{
-            entry.target.style.animation = `none`;
-        }
-    });
-})
-
-anim.forEach(element => {
-    observer.observe(element);
+observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.intersectionRatio > 0) {
+      entry.target.style.animation = `fade1 1s linear`;
+    } else {
+      entry.target.style.animation = `none`;
+    }
+  });
 });
 
+anim.forEach((element) => {
+  observer.observe(element);
+});
 
-/* var myModal = new bootstrap.Modal(document.getElementById('myModal'), {
-    keyboard: false
-}) */
+const videoopen = document.querySelector("#videoopen");
+const videoclose = document.querySelector("#videoclose");
+const video = document.querySelector("#myvidd");
+let src = video.children[0].src;
 
-/* if (window.matchMedia('(display-mode: standalone)').matches) {
-        console.log('Running in standalone');
-      }else{
-        myModal.show();
-        setTimeout(() => {
-            myfunc();
-        }, 9000);
-      } */
-/* function myfunc(){
-    myModal.hide();
-} */
+window.addEventListener("load", () => {
+  video.children[0].src = "";
+});
+
+videoopen.addEventListener("click", () => {
+  video.children[0].src = src;
+  video.muted = false;
+  video.play();
+});
+
+videoclose.addEventListener("click", () => {
+  console.log("video paused");
+  video.children[0].src = "";
+  video.pause();
+});

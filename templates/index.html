@@ -27,7 +27,7 @@ robonauts,nepal,the robonauts,robotics training nepal
             <div class="child">
                 <h1 class="title">The <span class="bordbot1">Robonauts
                 </h1>
-                <p class="font-weight-bold py-2">
+                <p class="font-weight-bold py-2 text-dark">
                     Let's promote robotics togther
                 </p>
                 <p class="inside_title justifyy">
@@ -35,13 +35,46 @@ robonauts,nepal,the robonauts,robotics training nepal
                     and research to bring the revolution in the field of Robotics in Nepal.
                 </p>
 
-                <a href="#" class="btn btn-lg mybtn2 mt-4 no-border">Contact us
+                <a href="#" class="btn btn-md mybtn2 mt-4 no-border">Contact us
                     <svg width="1.4em" height="1.4em" viewBox="0 0 16 16" class="bi bi-arrow-right-short mys"
                         fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd"
                             d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
                     </svg>
                 </a>
+                <button class="btn btn-md mt-4 ml-4 text-danger" data-toggle="modal" data-target="#exampleModal"
+                    id="videoopen">
+                    <svg width="1.4em" height="1.4em" viewBox="0 0 16 16" class="bi bi-play-fill" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" />
+                    </svg>
+                    Watch
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">The Robonauts - Intro Video</h5>
+                                <button type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close"
+                                    id="videoclose">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-x-circle-fill"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <video autoplay muted class="img-fluid videostyle" id="myvidd">
+                                    <source src="{% static 'images/myintro.mp4' %}" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="col-md-6 abcd efd">
@@ -59,10 +92,7 @@ robonauts,nepal,the robonauts,robotics training nepal
         </div>
         <div class="row row-cols-1 row-cols-sm-2 mt-md-2">
             <div class="col p-5 p-md-5">
-                <video autoplay muted loop poster="{% static 'images/first_global.jpg' %}"
-                    class="img-fluid rounded videostyle">
-                    <source src="{% static 'images/myintro.mp4' %}" type="video/mp4">
-                </video>
+                <img src="{% static 'images/first_global.jpg' %}" alt="heroo" class="img-fluid">
             </div>
             <div class="col px-5">
                 <div class="mt-0 pt-3 pt-sm-0 px-3 mt-lg-0 pt-lg-5">

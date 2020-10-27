@@ -28,10 +28,6 @@ nav ul li a:hover {
   justify-content: start;
   display: grid;
 }
-.videostyle {
-  border-radius: 10px !important;
-  pointer-events: none;
-}
 .videostyle:focus {
   outline: none !important;
 }
@@ -76,6 +72,25 @@ nav ul li a:hover {
   border: 1px solid #002259;
   transform: scale(1.01);
   transition: 0.4s ease-in-out;
+}
+#videoopen {
+  background-color: #ffffff;
+  color: #002259;
+  box-shadow: 0px 0px 10px 1px rgba(255, 0, 0, 0.178);
+  border-radius: 100px;
+  border: none;
+  transition: 0.4s ease-in-out;
+}
+#videoopen:hover {
+  background-color: #ffffff;
+  color: #002259;
+  box-shadow: 0px 0px 20px 1px rgba(255, 0, 0, 0.178);
+  border-radius: 100px;
+  border: none;
+  transition: 0.4s ease-in-out;
+}
+#videoopen:active {
+  box-shadow: 0px 0px 10px 1px rgba(255, 0, 0, 0.178);
 }
 .mybtn2:hover .mys {
   transform: scale(1.01);
