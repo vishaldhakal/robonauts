@@ -75,7 +75,7 @@ nav ul li a:hover {
 }
 #videoopen {
   background-color: #ffffff;
-  color: #002259;
+  color: rgb(255, 38, 0);
   box-shadow: 0px 0px 10px 1px rgba(255, 0, 0, 0.178);
   border-radius: 100px;
   border: none;
@@ -83,7 +83,7 @@ nav ul li a:hover {
 }
 #videoopen:hover {
   background-color: #ffffff;
-  color: #002259;
+  color: rgb(255, 38, 0);
   box-shadow: 0px 0px 20px 1px rgba(255, 0, 0, 0.178);
   border-radius: 100px;
   border: none;
