@@ -4,7 +4,7 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 nav ul li a {
   color: gray !important;
@@ -75,7 +75,7 @@ nav ul li a:hover {
 }
 #videoopen {
   background-color: #ffffff;
-  color: rgb(255, 38, 0);
+  color: rgb(255, 94, 0);
   box-shadow: 0px 0px 10px 1px rgba(255, 0, 0, 0.178);
   border-radius: 100px;
   border: none;
@@ -83,7 +83,7 @@ nav ul li a:hover {
 }
 #videoopen:hover {
   background-color: #ffffff;
-  color: rgb(255, 38, 0);
+  color: rgb(255, 94, 0);
   box-shadow: 0px 0px 20px 1px rgba(255, 0, 0, 0.178);
   border-radius: 100px;
   border: none;
@@ -324,7 +324,6 @@ iframe {
 .package-section {
   padding: 20px 20px 20px 20px;
   margin-top: 150px;
-  background: url("../images/first_global.jpg");
   background: #f1f3fa;
   color: rgb(24, 24, 24);
 }
