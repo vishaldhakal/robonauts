@@ -8,6 +8,10 @@ body {
 }
 nav ul li a {
   color: gray !important;
+  font-weight: 600;
+}
+#navbar {
+  transition: all 0.5s ease;
 }
 nav ul li a:hover {
   color: #002259 !important;
@@ -643,6 +647,9 @@ iframe {
   }
 }
 @media (max-width: 700px) {
+  .main {
+    background: none;
+  }
   .our-team .title {
     font-size: 0.6rem;
   }
@@ -718,6 +725,9 @@ iframe {
   .title {
     font-size: 1.6rem;
     font-weight: bold;
+  }
+  .smaller {
+    font-size: 1.3rem;
   }
 }
 

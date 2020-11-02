@@ -27,7 +27,7 @@
 
     <div class="main">
         <!--Navbar Start-->
-        <div class="container myshad shadow-sm rounded-bottom fix">
+        <div class="container myshad shadow-sm rounded-bottom fix" id="navbar">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="{% url 'index' %}">
@@ -206,10 +206,12 @@
             </nav>
         </div>
         <!--Navbar End-->
+        {% block mine %}
+        {% endblock %}
     </div>
 
     <!--Mobile Bottom Navbar Start-->
-    <div class="foot texx p-2">
+    <div class="foot texx p-2 bg-light">
         <div class="row row-cols-5 text-center">
             <a href="{% url 'index' %}" class="col py-2 {% if '/' == request.path %}text-danger{% endif %} link btnn">
                 <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-house-door" fill="currentColor"

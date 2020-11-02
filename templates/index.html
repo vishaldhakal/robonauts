@@ -15,9 +15,16 @@ robonauts,nepal,the robonauts,robotics training nepal
 {% endblock %}
 {% block css %}
 <link rel="stylesheet" href="{% static 'css/glider.min.css' %}">
+<style>
+    .main {
+        background: url("{% static 'images/maskk.svg' %}");
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+</style>
 {% endblock %}
-{% block body %}
-<!-- <circle class="light-green align-left mycircle"></circle> -->
+
+{% block mine %}
 <div class="container my-5 my-sm-5 py-5">
     <div class="row pt-0 mt-0">
         <div class="col-md-6 abcd hid">
@@ -84,6 +91,11 @@ robonauts,nepal,the robonauts,robotics training nepal
         </div>
     </div>
 </div>
+{% endblock %}
+
+{% block body %}
+<!-- <circle class="light-green align-left mycircle"></circle> -->
+
 <!--Section our work start-->
 <div class="container">
     <div class="myback">
@@ -657,7 +669,8 @@ robonauts,nepal,the robonauts,robotics training nepal
             </div>
             <div class="col mytit">
                 <div>
-                    <h2 class="justifyy fon">For More flexible and customized <span class="gradient-text">Robotics
+                    <h2 class="justifyy fon smaller">For More flexible and customized <span
+                            class="gradient-text">Robotics
                             and Automation Trainings</span> for your institution/college please feel free to contact
                         us!</h2>
                     <a href="#" class="btn mybtn2 mt-2">Make a customized plan »</a>
